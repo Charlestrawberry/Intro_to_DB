@@ -1,5 +1,6 @@
 -- task_2.sql
--- Creates all tables in the alx_book_store database
+-- Create all tables in alx_book_store database
+-- All SQL keywords are in uppercase
 
 USE alx_book_store;
 
