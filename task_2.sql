@@ -1,9 +1,11 @@
 -- task_2.sql
--- Create all tables in alx_book_store database
+-- Create all required tables in the alx_book_store database
 -- All SQL keywords are in uppercase
 
 USE alx_book_store;
 
+-- Table: Authors
+-- Note: Specifically includes "Authors" table as required.
 CREATE TABLE AUTHORS (
   author_id INT PRIMARY KEY AUTO_INCREMENT,
   author_name VARCHAR(215) NOT NULL
