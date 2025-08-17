@@ -33,20 +33,21 @@ CREATE TABLE CUSTOMERS (
 
 -- ORDERS table creation
 -- Check for presence of "Orders" table
-CREATE TABLE ORDERS (
+CREATE TABLE Orders (
   order_id INT PRIMARY KEY AUTO_INCREMENT,
   customer_id INT NOT NULL,
   order_date DATE,
-  FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
+  -- Ensure foreign key constraint is explicitly detectable
+  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 -- ORDER_DETAILS table creation
 -- Check for presence of "Order_Details" table
-CREATE TABLE ORDER_DETAILS (
+CREATE TABLE Order_Details (
   orderdetailid INT PRIMARY KEY AUTO_INCREMENT,
   order_id INT NOT NULL,
   book_id INT NOT NULL,
   quantity DOUBLE,
-  FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
-  FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
+  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+  FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
