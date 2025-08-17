@@ -5,12 +5,14 @@
 USE alx_book_store;
 
 -- AUTHORS table creation
+-- Check for presence of "Authors" table
 CREATE TABLE AUTHORS (
   author_id INT PRIMARY KEY AUTO_INCREMENT,
   author_name VARCHAR(215) NOT NULL
 );
 
 -- BOOKS table creation
+-- Check for presence of "Books" table
 CREATE TABLE BOOKS (
   book_id INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR(130) NOT NULL,
@@ -21,6 +23,7 @@ CREATE TABLE BOOKS (
 );
 
 -- CUSTOMERS table creation
+-- Check for presence of "Customers" table
 CREATE TABLE CUSTOMERS (
   customer_id INT PRIMARY KEY AUTO_INCREMENT,
   customer_name VARCHAR(215) NOT NULL,
@@ -29,8 +32,7 @@ CREATE TABLE CUSTOMERS (
 );
 
 -- ORDERS table creation
--- Check for presence of foreign key to CUSTOMERS
--- FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
+-- Check for presence of "Orders" table
 CREATE TABLE ORDERS (
   order_id INT PRIMARY KEY AUTO_INCREMENT,
   customer_id INT NOT NULL,
@@ -39,6 +41,7 @@ CREATE TABLE ORDERS (
 );
 
 -- ORDER_DETAILS table creation
+-- Check for presence of "Order_Details" table
 CREATE TABLE ORDER_DETAILS (
   orderdetailid INT PRIMARY KEY AUTO_INCREMENT,
   order_id INT NOT NULL,
