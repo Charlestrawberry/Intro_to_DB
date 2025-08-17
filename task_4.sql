@@ -1,13 +1,5 @@
--- Print the full description of the BOOKS table
--- Without using DESCRIBE or EXPLAIN
+-- Use the correct database
+USE alx_book_store;
 
-SELECT 
-    COLUMN_NAME,
-    COLUMN_TYPE,
-    IS_NULLABLE,
-    COLUMN_KEY,
-    COLUMN_DEFAULT,
-    EXTRA
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()
-  AND TABLE_NAME = 'books';
+-- Show the full description of the BOOKS table without DESCRIBE or ANALYZE
+SHOW CREATE TABLE BOOKS;
